@@ -21,7 +21,7 @@ Dockerfile
 Guardfile
 log/*
 node_modules
-Procfile*
+Procfile.dev
 public/assets/*
 public/packs-test
 public/packs/*
