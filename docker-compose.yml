@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  web:
+  web: &app_base
     environment:
       NODE_ENV: development
       RAILS_ENV: development
@@ -45,6 +45,20 @@ services:
       - '6380:6380'
     volumes:
     - 'redis/data'
+
+  worker:
+    <<: *app_base
+    command: "sidekiq -C config/initializers/sidekiq.yml"
+    entrypoint: []
+    deploy:
+      resources:
+        limits:
+          cpus: '${DOCKER_WORKER_CPUS:-0}'
+          memory: '${DOCKER_WORKER_MEMORY:-0}'
+
+    ports: []
+    depends_on:
+      - web
 
 volumes:
   redis:
