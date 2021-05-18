@@ -55,6 +55,9 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   config.log_tags = [:request_id]
 
+  # Use Redis store for caching.
+  config.cache_store = :redis_cache_store, { url: ENV.fetch("REDIS_URL_CACHING", "redis://localhost:6379/0") }
+
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 

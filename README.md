@@ -1,4 +1,4 @@
-# README
+# ScubaBooker App
 
 A copy of the blog created in [Rails getting
 started](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application)
