@@ -23,6 +23,7 @@
     "blueimp-file-upload": "^10.31.0",
     "blueimp-load-image": "^5.14.0",
     "blueimp-tmpl": "^3.19.0",
+    "eslint-plugin-react": "^7.23.2",
     "jquery": "^3.6.0",
     "parsleyjs": "^2.9.2",
     "popper.js": "^1.16.1",

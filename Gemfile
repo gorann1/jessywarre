@@ -41,6 +41,7 @@ gem 'friendly_id'
 gem 'stringex'
 gem 'rollbar'
 gem 'rack-cors', require: 'rack/cors'
+gem 'devise'
 
 # Image uploads
 gem 'shrine'
