@@ -8,6 +8,7 @@ services:
       WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: example
+      REDIS_URL_CACHING: redis://redis:6379/0
 
     build:
       context: .
@@ -29,7 +30,8 @@ services:
       - '3035:3035'
 
     depends_on:
-      - db
+      - 'db'
+      - 'redis'
 
   db:
     image: postgres:13.2
@@ -42,9 +44,9 @@ services:
     image: redis:alpine
     command: redis-server
     ports:
-      - '6380:6380'
+      - '6381:6381'
     volumes:
-    - 'redis/data'
+      - 'redis:/data'
 
   worker:
     <<: *app_base
