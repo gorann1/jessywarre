@@ -10,9 +10,7 @@ gem 'pg', '~> 1.0'
 # Use SCSS for stylesheets
 gem 'sassc-rails'
 # Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker', '~> 5.0'
+gem 'puma', '~> 5.3'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -22,6 +20,8 @@ gem 'panko_serializer'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
+gem 'webpacker', '~> 5.3'
 
 gem 'slim-rails'
 gem 'kaminari'
@@ -42,6 +42,8 @@ gem 'stringex'
 gem 'rollbar'
 gem 'rack-cors', require: 'rack/cors'
 gem 'devise'
+gem 'react-rails'
+gem 'sass-rails', '~> 6'
 
 # Image uploads
 gem 'shrine'
@@ -58,6 +60,10 @@ group :development, :test do
 
   # Support #save_and_open_page in feature specs
   gem 'launchy'
+  gem 'bundle-audit'
+  gem 'brakeman'
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry-rails'
 
   gem 'rspec-rails'
   gem 'factory_bot_rails'
