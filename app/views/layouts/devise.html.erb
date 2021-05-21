@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scubabooker | Login</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all',
+                          'data-turbolinks-track': 'reload' %>
+
+
+  <%= stylesheet_pack_tag 'application', media: 'all',
+                          'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+
+<body class="bg-grey-lighter h-screen font-sans">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<div class="flex flex-col items-center justify-center bg-gray-300 h-screen select-none">
+
+  <%= yield %>
+</div>
+</body>
+</html>
