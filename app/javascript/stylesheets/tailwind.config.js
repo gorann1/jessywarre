@@ -8,6 +8,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+        colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            blue: {
+                light: '#85d7ff',
+                DEFAULT: '#262262',
+                dark: '#009eeb',
+            },
+        },
         borderWidths: {
             default: '1px',
             '0': '0',
