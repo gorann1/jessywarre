@@ -24,16 +24,12 @@
                    class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                  >Dashboard</a
                  >
-
                  <a
                    href="#"
                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                  >Team</a
                  >
 
-                 <a><%= link_to "Logout", destroy_user_session_path,
-                                class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
-                                method: :delete %></a>
                  <a
                    href="#"
                    class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -49,6 +45,7 @@
            </div>
            <div class="hidden md:block">
              <div class="ml-4 flex items-center md:ml-6">
+               <%= link_to 'Admin Panel',  admin_root_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium", target: :_blank if current_user.superadmin?%>
                <button
                  class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                >
@@ -122,13 +119,16 @@
                    >Settings</a
                    >
 
-                   <a
-                     href="#"
-                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                     role="menuitem"
-                   >Sign out</a
-                   >
+                   <a><%= link_to "Logout",
+                                  destroy_user_session_path,
+                                  class:"block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
+                                  role:"menuItem",
+                                  method: :delete %></a>
                  </div>
+               </div>
+               <!-- Green Button -->
+               <div class="border-2 ml-4 px-4 border-green-300 rounded-lg px-3 py-2 text-green-200 cursor-pointer hover:bg-green-300 hover:text-green-800">
+                 Bookiraj
                </div>
              </div>
            </div>
@@ -198,10 +198,6 @@
              class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
            >Dashboard</a
            >
-
-           <a><%= link_to "Logout", destroy_user_session_path,
-                          class:"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium",
-                          method: :delete %></a>
 
            <a
              href="#"
@@ -273,11 +269,13 @@
              >Settings</a
              >
 
-             <a
-               href="#"
-               class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-             >Sign out</a
-             >
+             <a><%= link_to "Logout",
+                            destroy_user_session_path,
+                            class:"block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700",
+                            method: :delete %></a>
+           </div>
+           <div class="border-2 px-3 py-2 border-green-300 rounded-md text-green-200 cursor-pointer hover:bg-green-300 hover:text-green-800">
+             Bookiraj
            </div>
          </div>
        </div>
