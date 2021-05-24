@@ -42,7 +42,6 @@
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.1.3.2, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.7.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arbre (v1.4.0, rbenv: 3.0.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="argon2 (v2.0.3, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.2, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-eventstream (v1.1.1, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="aws-partitions (v1.457.0, rbenv: 3.0.1) [gem]" level="application" />
@@ -65,7 +64,6 @@
     <orderEntry type="library" scope="PROVIDED" name="capybara (v3.35.3, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="chartkick (v4.0.4, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v3.0.0, rbenv: 3.0.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="clearance (v2.4.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coderay (v1.1.3, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="concurrent-ruby (v1.1.8, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="connection_pool (v2.2.5, rbenv: 3.0.1) [gem]" level="application" />
@@ -82,7 +80,6 @@
     <orderEntry type="library" scope="PROVIDED" name="elasticsearch-api (v7.12.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="elasticsearch-transport (v7.12.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="email_spec (v2.2.0, rbenv: 3.0.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="email_validator (v2.2.3, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="errbase (v0.2.1, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.10.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="et-orbi (v1.2.4, rbenv: 3.0.1) [gem]" level="application" />
@@ -94,7 +91,6 @@
     <orderEntry type="library" scope="PROVIDED" name="faraday-net_http (v1.0.1, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="faraday-net_http_persistent (v1.1.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.0, rbenv: 3.0.1) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="ffi-compiler (v1.0.1, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formtastic (v4.0.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formtastic_i18n (v0.6.0, rbenv: 3.0.1) [gem]" level="application" />
@@ -212,6 +208,7 @@
     <orderEntry type="library" scope="PROVIDED" name="temple (v0.8.2, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v1.1.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v2.0.10, rbenv: 3.0.1) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="toastr-rails (v1.0.3, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks (v5.2.1, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="turbolinks-source (v5.2.0, rbenv: 3.0.1) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tzinfo (v2.0.4, rbenv: 3.0.1) [gem]" level="application" />

@@ -74,9 +74,6 @@ GEM
     arbre (1.4.0)
       activesupport (>= 3.0.0, < 6.2)
       ruby2_keywords (>= 0.0.2, < 1.0)
-    argon2 (2.0.3)
-      ffi (~> 1.14)
-      ffi-compiler (~> 1.0)
     ast (2.4.2)
     aws-eventstream (1.1.1)
     aws-partitions (1.457.0)
@@ -125,14 +122,6 @@ GEM
       xpath (~> 3.2)
     chartkick (4.0.4)
     childprocess (3.0.0)
-    clearance (2.4.0)
-      actionmailer (>= 5.0)
-      activemodel (>= 5.0)
-      activerecord (>= 5.0)
-      argon2 (~> 2.0, >= 2.0.2)
-      bcrypt (>= 3.1.1)
-      email_validator (~> 2.0)
-      railties (>= 5.0)
     coderay (1.1.3)
     concurrent-ruby (1.1.8)
     connection_pool (2.2.5)
@@ -166,8 +155,6 @@ GEM
       htmlentities (~> 4.3.3)
       launchy (~> 2.1)
       mail (~> 2.7)
-    email_validator (2.2.3)
-      activemodel
     errbase (0.2.1)
     erubi (1.10.0)
     et-orbi (1.2.4)
@@ -188,9 +175,6 @@ GEM
     faraday-net_http (1.0.1)
     faraday-net_http_persistent (1.1.0)
     ffi (1.15.0)
-    ffi-compiler (1.0.1)
-      ffi (>= 1.0.0)
-      rake
     formatador (0.2.5)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
@@ -476,6 +460,8 @@ GEM
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
+    toastr-rails (1.0.3)
+      railties (>= 3.1.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -517,7 +503,6 @@ DEPENDENCIES
   bundle-audit
   byebug
   capybara (>= 3.26)
-  clearance
   devise
   dotenv-rails
   email_spec
@@ -562,6 +547,7 @@ DEPENDENCIES
   spring
   spring-commands-rspec
   stringex
+  toastr-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

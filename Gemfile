@@ -44,6 +44,9 @@ gem 'devise'
 gem 'react-rails'
 gem 'sass-rails', '~> 6'
 gem 'activeadmin'
+gem 'toastr-rails'
+
+
 
 # Image uploads
 gem 'shrine'
