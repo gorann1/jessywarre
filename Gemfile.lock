@@ -39,6 +39,7 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_material (1.5.2)
     activeadmin (2.9.0)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (>= 3.1, < 5.0)
@@ -184,6 +185,7 @@ GEM
     fugit (1.4.5)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
+    gem (0.0.1.alpha)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     guard (2.17.0)
@@ -495,6 +497,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_material (~> 1.5)
   activeadmin
   aws-sdk-s3
   blazer
@@ -508,6 +511,7 @@ DEPENDENCIES
   email_spec
   factory_bot_rails
   friendly_id
+  gem (~> 0.0.1.alpha)
   guard-rspec
   image_processing
   kaminari
@@ -558,4 +562,4 @@ RUBY VERSION
    ruby 3.0.1p64
 
 BUNDLED WITH
-   2.2.16
+   2.2.17

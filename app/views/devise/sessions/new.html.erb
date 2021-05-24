@@ -3,6 +3,7 @@
     <div class="font-medium self-center text-xl sm:text-2xl uppercase w-60 text-center bg-purple-600 shadow-2xl p-6 rounded-full text-white">Sign In</div>
     <div class="mt-10">
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= render 'shared/devisemes' %>
         <div class="relative w-full mb-3">
           <%= f.input_field :email,
                       type:'email',
