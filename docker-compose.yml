@@ -44,7 +44,7 @@ services:
     image: jessy
     command: ./bin/webpack-dev-server
     ports:
-    - '3035:3035'
+    - '3036:3036'
     environment:
       - NODE_ENV=development
       - RAILS_ENV=development
@@ -62,12 +62,14 @@ services:
       POSTGRES_PASSWORD: example
     volumes:
       - db_data:/var/lib/postgresql/data
+    ports:
+      - '5432'
 
   redis:
     image: redis:alpine
     command: redis-server
     ports:
-      - '6381:6381'
+      - '6382:6382'
     volumes:
       - 'redis:/data'
 
