@@ -46,6 +46,7 @@ gem 'sass-rails', '~> 6'
 gem 'activeadmin'
 gem 'toastr-rails'
 gem 'active_link_to'
+gem 'ransack'
 
 
 
