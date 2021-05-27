@@ -20,24 +20,20 @@
                <div class="ml-10 flex items-baseline space-x-4">
                  <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                  <a
-                   href="#"
-                   class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-                 >Dashboard</a
+                   href="/"
+                   class="current:bg-gray-900 text-gray-300 px-3 py-2 hover:bg-gray-700 rounded-md text-sm font-medium"
+                 >Doma</a
                  >
+                 <%= link_to "Centri", centers_path, class: ["active:bg-indigo-600 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium", ("focus" if request.path == centers_path)] %>
                  <a
                    href="#"
-                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                 >Team</a
-                 >
-
-                 <a
-                   href="#"
-                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                   class="focus:bg-blue-light text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                  >Calendar</a
                  >
+                 <%= active_link_to 'Centers', centers_path, class_active: 'enabled' %>
 
                  <a
-                   class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                   class="active:bg-indigo-300 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                  >Reports</a
                  >
                </div>
@@ -45,7 +41,7 @@
            </div>
            <div class="hidden md:block">
              <div class="ml-4 flex items-center md:ml-6">
-               <%= link_to 'Admin Panel',  admin_root_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium", target: :_blank if current_user.superadmin?%>
+               <%= link_to 'Admin Panel',  admin_root_path, class:"border-2 border-purple-600 text-purple-300 hover:bg-purple-500 hover:text-purple-100 px-3 py-2 rounded-md text-sm font-medium", target: :_blank if current_user.superadmin?%>
                <button
                  class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                >
@@ -127,7 +123,7 @@
                  </div>
                </div>
                <!-- Green Button -->
-               <div class="border-2 ml-4 px-4 border-green-300 rounded-lg px-3 py-2 text-green-200 cursor-pointer hover:bg-green-300 hover:text-green-800">
+               <div class="border-2 ml-4 px-6 border-green-300 rounded-lg py-2 text-green-200 cursor-pointer hover:bg-green-300 hover:text-green-800">
                  Bookiraj
                </div>
              </div>
