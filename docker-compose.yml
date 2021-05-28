@@ -98,6 +98,15 @@ services:
     depends_on:
       - web
 
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx.Dockerfile
+      depends_on:
+        - app
+      ports:
+        - 80:80
+
 volumes:
   bundle:
   rails_cache:
