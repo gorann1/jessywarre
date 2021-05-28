@@ -1,4 +1,4 @@
-<div class="w-10/12 bg-gray-900 mt-8 py-4">
+<div class="w-10/12 bg-gray-900 mt-8 py-4 mx-auto">
   <%= search_form_for @q do |f| %>
     <%= f.search_field :name_cont, class:"border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm", focus:"outline-none",
                        type:"search", placeholder:"Search" %>
@@ -7,11 +7,11 @@
       <%= f.collection_select :country_id_eq, Country.all, :id, :name, class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50", :prompt => 'Država' %>
       <%= f.collection_select :region_id_eq, Region.all, :id, :name, class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50", :prompt => 'Regija' %>
       <button
-        class="px-4 py-2 font-medium tracking-wide text-white capitalize bg-blue-600 rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+        class="px-4 py-2 font-medium tracking-wide text-white capitalize border-2 border-green-300 rounded hover:bg-green-300 hover:text-green-600 focus:outline-none focus:bg-blue-500">
         Search
       </button>
     </div>
-    <%= link_to "Reset", request.path, class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+    <%= link_to "Reset", request.path, class:"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
   <% end %>
 </div>
 <div class="container px-6 py-10 mx-auto">

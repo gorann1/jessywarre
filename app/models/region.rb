@@ -1,7 +1,6 @@
-class Country < ApplicationRecord
+class Region < ApplicationRecord
   belongs_to :zone
-  has_many :regions
+  belongs_to :country
   has_many :centers
   has_many :locations
-
 end
