@@ -14,8 +14,6 @@ services:
     build:
       context: .
       dockerfile: ./web/Dockerfile
-      depends_on:
-        - app
       ports:
         - '80:80'
       args:
