@@ -13,9 +13,6 @@ services:
 
     build:
       context: .
-      dockerfile: ./web/Dockerfile
-      ports:
-        - '80:80'
       args:
         USER_ID: 1000
         GROUP_ID: 1000
