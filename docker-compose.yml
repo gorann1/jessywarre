@@ -103,7 +103,7 @@ services:
       context: .
       dockerfile: ./nginx.Dockerfile
     depends_on:
-      - app
+      - web
     ports:
       - 80:80
 
