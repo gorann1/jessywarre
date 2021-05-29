@@ -105,7 +105,7 @@ services:
     depends_on:
       - web
     ports:
-      - 80:80
+      - 8480:80
 
 volumes:
   bundle:
