@@ -106,9 +106,9 @@ services:
       - web
     restart: always
     volumes:
-    - .:/app
+    - '.:/home/user/myapp'
     ports:
-      - '8084:80'
+      - 84:80
 
 volumes:
   bundle:
