@@ -104,6 +104,9 @@ services:
       dockerfile: ./nginx.Dockerfile
     depends_on:
       - web
+    restart: always
+    volumes:
+    - '.:/home/user/myapp'
     ports:
       - 84:80
 
