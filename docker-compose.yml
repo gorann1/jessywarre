@@ -106,7 +106,7 @@ services:
       - web
     restart: always
     volumes:
-    - '.:/app'
+    - .:/app
     ports:
       - '8084:80'
 
