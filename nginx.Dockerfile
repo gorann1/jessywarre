@@ -1,6 +1,6 @@
 FROM nginx
 RUN apt-get update -qq && apt-get -y install apache2-utils
-ENV RAILS_ROOT /app
+ENV RAILS_ROOT /myapp
 WORKDIR $RAILS_ROOT
 RUN mkdir log
 COPY public public/
