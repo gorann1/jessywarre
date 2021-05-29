@@ -7,7 +7,7 @@ COPY public public/
 COPY entrypoint.sh /usr/local/bin/nginx-entrypoint.sh
 # Copy Nginx config template
 RUN rm /etc/nginx/conf.d/default.conf
-COPY docker/nginx/scubabooker.conf /etc/nginx/conf.d/scubabooker.conf
+COPY scubabooker.conf /etc/nginx/conf.d/scubabooker.conf
 
 # Nginx init
 RUN ["chmod", "+x", "/usr/local/bin/nginx-entrypoint.sh"]
