@@ -271,6 +271,7 @@ GEM
       shellany (~> 0.0)
     oj (3.11.5)
     orm_adapter (0.5.0)
+    pagy (3.11.0)
     panko_serializer (0.7.5)
       activesupport
       oj (~> 3.11.0)
@@ -522,6 +523,7 @@ DEPENDENCIES
   letter_opener
   listen (~> 3.3)
   mini_magick
+  pagy (~> 3.5)
   panko_serializer
   paper_trail
   pg (~> 1.0)

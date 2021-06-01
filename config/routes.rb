@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     get :up
   end
 
+  resources :locations
+  get 'locations', to: 'locations#index'
+  get '/locations/:id', to: 'locations#show'
+
+
   ActiveAdmin.routes(self)
   devise_for :users, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "register" }
   get 'pages/home'

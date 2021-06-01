@@ -11,6 +11,7 @@ require("@rails/activestorage").start();
 require("channels");
 require("../stylesheets/global.scss");
 
+import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
 window.toastr = toastr
 

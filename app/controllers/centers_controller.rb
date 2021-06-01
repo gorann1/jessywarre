@@ -2,9 +2,12 @@ class CentersController < ApplicationController
   layout 'center'
 
   def index
-    Center.order('id ASC').reorder('name DESC')
+    #Center.order('id ASC').reorder('name DESC')
     @q = Center.ransack(params[:q])
+    @q.sorts = ['name asc', 'created_at desc'] if @q.sorts.empty?
     @centers = @q.result
+    @pagy, @centers = pagy(@q.result, items: 18)
+
   end
 
   def show

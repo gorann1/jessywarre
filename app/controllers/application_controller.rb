@@ -1,6 +1,9 @@
 class ApplicationController < ActionController::Base
   include DeviseWhitelist
   include CurrentUserConcern
+  include Pagy::Backend
+
+
 
   def authenticate_active_admin_user!
     authenticate_user!

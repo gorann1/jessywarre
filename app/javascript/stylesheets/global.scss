@@ -8,21 +8,10 @@
 @import "toastr";
 @import 'toastr/build/toastr.min';
 
+@import "active";
+@import "pagy";
 
-a.enabled {
-  color: #21d1b0;
-}
 
-#q_zone_id_eq {
-  padding: 10px;
-}
-#q_country_id_eq {
- padding: 10px;
-}
-
-#q_region_id_eq {
-  padding: 10px;
-}
 
 /*! tailwindcss v2.0.3 | MIT License | https://tailwindcss.com */
 

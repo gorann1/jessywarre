@@ -24,13 +24,8 @@
                    class="current:bg-gray-900 text-gray-300 px-3 py-2 hover:bg-gray-700 rounded-md text-sm font-medium"
                  >Doma</a
                  >
-                 <%= link_to "Centri", centers_path, class: ["active:bg-indigo-600 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium", ("focus" if request.path == centers_path)] %>
-                 <a
-                   href="#"
-                   class="focus:bg-blue-light text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                 >Calendar</a
-                 >
-                 <%= active_link_to 'Centers', centers_path, class_active: 'enabled' %>
+                 <%= active_link_to 'Centri', centers_path, class_active: 'enabled', class:"focus:bg-blue-light text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
+                 <%= active_link_to 'Lokacije', locations_path, class_active: 'enabled', class:"focus:bg-blue-light text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" %>
 
                  <a
                    class="active:bg-indigo-300 text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
