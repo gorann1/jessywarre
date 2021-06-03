@@ -48,6 +48,7 @@ gem 'toastr-rails'
 gem 'active_link_to'
 gem 'ransack'
 gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
+gem 'gmaps4rails'
 
 
 

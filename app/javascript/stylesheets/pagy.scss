@@ -13,7 +13,7 @@
 .pagy-nav-js .page,
 .pagy-combo-nav-js .page,
 .pagy-combo-nav-js .pagy-combo-input {
-  @apply text-gray-700 border-r border-gray-600 px-3 py-2 text-sm leading-tight font-medium;
+  @apply text-white border-r border-gray-600 px-3 py-2 text-sm leading-tight font-medium;
 }
 .pagy-nav .page:hover,
 .pagy-nav-js .page:hover {
@@ -31,10 +31,10 @@
 .pagy-nav .prev,
 .pagy-nav-js .prev,
 .pagy-combo-nav-js .prev {
-  @apply text-gray-900;
+  @apply text-gray-100;
 }
 .pagy-nav .next,
 .pagy-nav-js .next,
 .pagy-combo-nav-js .next {
-  @apply text-gray-900 border-r border-transparent;
+  @apply text-gray-100 border-r border-transparent;
 }

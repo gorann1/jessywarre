@@ -1,4 +1,4 @@
 class Assignment < ApplicationRecord
-  belongs_to :center
   belongs_to :location
+  belongs_to :center
 end

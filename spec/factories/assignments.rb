@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :assignment do
-    center { nil }
     location { nil }
+    center { nil }
   end
 end
