@@ -47,7 +47,7 @@
         <p class="text-md text-gray-900 font-semibold pt-2"><%= @location.category.name %></p>
       </div>
     </div>
-    <%#= image_tag @location.master_image, class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center object-cover" %>
+    <%= image_tag @location.main_image, class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center object-cover" %>
     <div class="description w-full mt-8 text-gray-500 text-sm">
       <%= simple_format(@location.desc) %></div>
     <!--    <h3>Dojmovi <%#= @location.average_rating %>(<%#=@reviews.count %>)</h3>
