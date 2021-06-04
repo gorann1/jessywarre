@@ -3,7 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 //= require toastr
+//= require underscore
+//= require gmaps/google
+//= require jquery
 //= require_tree .
+
 
 require("@rails/ujs").start();
 require("turbolinks").start();
@@ -11,6 +15,8 @@ require("@rails/activestorage").start();
 require("channels");
 require("../stylesheets/global.scss");
 
+import JQuery from 'jquery'
+window.$ = window.JQuery = JQuery
 import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
 window.toastr = toastr

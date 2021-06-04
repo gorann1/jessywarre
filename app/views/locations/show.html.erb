@@ -22,29 +22,29 @@
   </div>
 </div>
 <div class="flex min-h-auto bg-white">
-  <div class="md:w-1/2 max-w-lg mx-auto my-2 px-4 py-5 shadow-none">
-    <h1 class="text-6xl font-bold mt-4"><%= @location.name  %></h1>
+  <div class="md:w-1/2 max-w-lg mx-auto my-2 px-4 py-3 shadow-none">
+    <h1 class="text-4xl font-bold mt-4"><%= @location.name  %></h1>
     <!-- country region island -->
-    <div class="flex mt-16 font-light text-gray-500">
+    <div class="flex mt-8 font-light text-gray-500">
       <div class="pr-4">
         <span class="uppercase">Zona</span>
-        <p class="text-lg text-gray-900 font-semibold pt-2"><%= @location.zone.name %></p>
+        <p class="text-md text-gray-900 font-semibold pt-2"><%= @location.zone.name %></p>
       </div>
       <div class="pr-4">
         <span class="uppercase">Zemlja</span>
-        <p class="text-lg text-gray-900 font-semibold pt-2 capitalize;"><%= @location.country.nicename %></p>
+        <p class="text-md text-gray-900 font-semibold pt-2 capitalize;"><%= @location.country.nicename %></p>
       </div>
       <div class="pr-4">
         <span class="uppercase">Regija</span>
-        <p class="text-lg text-gray-900 font-semibold pt-2"><%= @location.region.name %></p>
+        <p class="text-gray-900 font-semibold pt-2"><%= @location.region.name %></p>
       </div>
       <div class="pr-4">
         <span class="uppercase">Tip</span>
-        <p class="text-lg text-gray-900 font-semibold pt-2"><%= @location.type.name %></p>
+        <p class="text-md text-gray-900 font-semibold pt-2"><%= @location.type.name %></p>
       </div>
       <div class="pr-4">
         <span class="uppercase">Kategorija</span>
-        <p class="text-lg text-gray-900 font-semibold pt-2"><%= @location.category.name %></p>
+        <p class="text-md text-gray-900 font-semibold pt-2"><%= @location.category.name %></p>
       </div>
     </div>
     <%#= image_tag @location.master_image, class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center object-cover" %>
@@ -99,7 +99,6 @@
         <div>
           <% @location.centers.each do |cc|%>
             <p class="font-bold text-gray-900">
-
             <%= link_to cc do %>
                 <%= cc.name %> <br/>
               <% end %>

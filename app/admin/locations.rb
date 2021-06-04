@@ -29,10 +29,21 @@ ActiveAdmin.register Location do
     column :Desc do |location|
       truncate(location.desc, length: 50)
     end
+    column :main_image do |location|
+      image_tag url_for(location.main_image.variant(resize_to_limit: [25,25]))
+    end
     actions
   end
 
-  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :mindepth, :maxdepth, :visibility, :currents, :is_spec, :gps, :desc
+  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :mindepth, :maxdepth, :visibility, :currents, :main_image, :is_spec, :gps, :desc
 
 
+  form do |f| #This is formtastic form builder
+  f.semantic_errors # shows errors on :base
+  f.inputs          # builds an input field for every attribute
+  f.inputs do
+    f.input :main_image, as: :file
+  end
+  f.actions         # adds the 'Submit' and 'Cancel' buttons
+  end
 end

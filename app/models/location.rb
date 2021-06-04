@@ -6,6 +6,6 @@ class Location < ApplicationRecord
   belongs_to :type
   has_many :assignments
   has_many :centers, :through => :assignments
-
+  has_one_attached :main_image
 
 end
