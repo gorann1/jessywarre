@@ -51,6 +51,7 @@ gem 'pagy', '~> 3.5' # omit patch digit and use the latest if possible
 gem 'gmaps4rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'jquery-turbolinks', '~> 2.1'
 
 
 

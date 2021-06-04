@@ -1,4 +1,6 @@
 class Location < ApplicationRecord
+  include ActionView::Helpers::TextHelper
+
   belongs_to :zone
   belongs_to :country
   belongs_to :region
