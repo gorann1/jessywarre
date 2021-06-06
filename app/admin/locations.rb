@@ -44,6 +44,26 @@ ActiveAdmin.register Location do
   f.inputs do
     f.input :main_image, as: :file
   end
+  f.input :desc, as: :quill_editor, input_html: { data:
+                                                    { options:
+                                                        { modules:
+                                                            { toolbar:
+                                                                [%w[bold italic underline strike],
+                                                                 %w[blockquote code-block],
+                                                                 [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                                                                 [{ 'align': [] }],
+                                                                 ['link'],
+                                                                 [{ 'size': ['small', false, 'large', 'huge'] }],
+                                                                 [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+                                                                 [{ 'indent': '-1' }, { 'indent': '+1' }],
+                                                                 [{ 'direction': 'rtl' }],
+                                                                 [{ 'color': [] }, { 'background': [] }],
+                                                                 [{ 'font': [] }],
+                                                                 ['clean'],
+                                                                 ['image'],
+                                                                 ['video']] },
+                                                          theme: 'snow' } } }, label: 'The content of the location description'
+  f.input :images, as: :file, input_html: { multiple: true }, label: 'Add illustrations to the article'
   f.actions         # adds the 'Submit' and 'Cancel' buttons
   end
 end

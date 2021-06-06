@@ -52,6 +52,7 @@ gem 'gmaps4rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jquery-turbolinks', '~> 2.1'
+gem 'activeadmin_quill_editor'
 
 
 

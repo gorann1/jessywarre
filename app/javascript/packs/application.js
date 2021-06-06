@@ -21,6 +21,7 @@ window.$ = window.JQuery = JQuery
 import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
 window.toastr = toastr
+//import "./quill-editor.js"
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -32,3 +33,9 @@ window.toastr = toastr
 const componentRequireContext = require.context("components", true);
 const ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
+
+require("trix")
+require("@rails/actiontext")
+import "controllers"
+
+

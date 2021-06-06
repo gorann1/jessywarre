@@ -9,5 +9,6 @@ class Location < ApplicationRecord
   has_many :assignments
   has_many :centers, :through => :assignments
   has_one_attached :main_image
+  has_rich_text :body
 
 end
