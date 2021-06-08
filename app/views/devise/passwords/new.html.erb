@@ -1,19 +1,20 @@
-<h2>Forgot your password?</h2>
-
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
   <%= render 'shared/devisemes' %>
   <%#= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Send me reset password instructions" %>
-  </div>
+<div class="w-full p-12 bg-white rounded-3xl">
+  <h1 class="text-xl font-semibold">Hello there 👋, <span class="font-normal">zaboravili ste lozinku</span></h1>
+  <form class="mt-6">
+    <%= f.input_field :password,
+                      id:"password_confirm",
+                      class:"block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner",
+                      required: true,
+                      autofocus: true,
+                      placeholder:"********",
+                      autocomplete:"new-password",
+                      input_html: { autocomplete: "email" } %>
+    <%= f.button :submit, "Pošalji mi link za resetiranje lozinke", class:"w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-indigo-500 shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"%>
+    <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
+  </form>
+  <%= render "devise/shared/links" %>
+</div>
 <% end %>
-
-<%= render "devise/shared/links" %>

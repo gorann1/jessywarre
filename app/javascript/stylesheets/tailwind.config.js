@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: [
       "../app/**/*.html.erb",
@@ -16,6 +18,8 @@ module.exports = {
                 DEFAULT: '#262262',
                 dark: '#009eeb',
             },
+            green: colors.teal,
+            purple: colors.violet
         },
         borderWidths: {
             default: '1px',

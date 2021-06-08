@@ -1,3 +1,5 @@
+<%= render "partials/stats" %>
+
 <section class="text-indigo-200 body-font p-5 bg-gray-800">
   <Link to="coursedet">
   <div class="mx-auto flex px-5  md:flex-row flex-col items-center jobcard">
@@ -8,7 +10,7 @@
         <div class="">
 
           <div class="pt-10 px-2 sm:px-6">
-            <span class="inline-block py-1 px-2 rounded-full bg-green-600 text-white  text-xs font-bold tracking-widest mb-2">Featured Courses</span>
+            <span class="inline-block py-1 px-2 rounded-full bg-green-300 text-white  text-xs font-bold tracking-widest mb-2">Featured Courses</span>
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-100">Before they sold out
               <br class="hidden lg:inline-block" />readymade gluten
             </h1>
@@ -37,263 +39,7 @@
   </div>
   </Link>
 </section>
-<section class="max-w-7xl px-4 pt-24 pb-12 mx-auto">
-  <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
-    <h1 class="block pb-2 mb-5 text-4xl font-extrabold leading-none tracking-normal text-transparent md:text-6xl md:tracking-tight bg-clip-text bg-gradient-to-r from-green-400 to-purple-500">
-      Simple, transparent pricing.
-    </h1>
-    <p class="px-0 mb-10 text-lg text-gray-500 md:text-xl lg:px-24">Pricing that works for companies of any size.</p>
-  </div>
-  <div class="w-full mx-auto xl:w-4/5">
-    <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 sm:gap-8">
-      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
-        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
-          <p class="mb-1 text-lg font-semibold text-yellow-600">Take Flight</p>
-          <p class="pb-0 my-2 font-mono text-4xl font-extrabold text-gray-900">$25</p>
-          <p class="text-sm text-gray-500">Organization / month</p>
-          <a href="#" class="w-full mt-6 btn btn-warning btn-lg">Get started for free &rarr;</a>
-        </div>
-        <ul class="flex flex-col flex-grow p-6 space-y-3">
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700"> Unlimited feedback </span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-            >One manager</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-            >1000 submitters</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700">Unlimited Private Boards</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-            >Custom domains support</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Support for German, French, Polish and more."
-            >Multi-language Support</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Manage your customer feedback at the comfort of your phone. On iOS and Android."
-            >Free iOS and Android apps</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700">3 Integrations</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span class="text-gray-700">New features every 14 days</span>
-          </li>
-        </ul>
-      </div>
-      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
-        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
-          <div>
-            <div class="flex items-center justify-between">
-              <p class="mb-1 text-lg font-semibold text-purple-700">Fly High</p>
-              <span class="badge bg-primary-light text-primary">Most popular</span>
-            </div>
-            <p class="my-2 font-mono text-4xl font-extrabold text-gray-900">$50</p>
-            <p class="text-sm text-gray-500">Organization / month</p>
-          </div>
-          <a href="#" class="w-full mt-6 btn btn-primary btn-lg">Get started for free &rarr;</a>
-        </div>
-        <ul class="flex flex-col flex-grow p-6 space-y-3">
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-            </svg>
-            <span class="font-medium text-purple-700">Everything in Take Flight</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            Unlimited feedback
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-            >10 manager</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-            >7500 submitters</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            <span>Unlimited Integrations</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-            Humane support
-          </li>
-        </ul>
-      </div>
-      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
-        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
-          <div>
-            <p class="mb-1 text-lg font-semibold text-pink-600">Enterprise</p>
-            <p class="my-2 text-4xl font-bold text-gray-900">Custom</p>
-            <p class="text-sm text-gray-500">Organization / month</p>
-          </div>
-          <a href="#" class="w-full mt-6 btn btn-light btn-lg">Initiate a chat &rarr;</a>
-        </div>
-        <ul class="flex flex-col flex-grow p-6 space-y-3">
-          <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-600">
-              <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-            </svg>
-            <span class="font-medium text-pink-600">Everything in Fly High</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            Unlimited feedback
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-            >Unlimited manager</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-            >Unlimited submitters</span
-            >
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span class="text-gray-700">Unlimited Integrations</span>
-          </li>
-          <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
-              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-            </svg>
-
-            <span
-              class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Access to developers to build custom features and changes for your enterprise."
-            >Feature on-request</span
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render 'partials/pricing' %>
 <section class="max-w-7xl-center text-indigo-200 body-font p-6 bg-gray-800">
   <div class="container mx-auto flex">
   <Link to="coursedet">
@@ -305,12 +51,12 @@
         <div class="">
 
           <div class="pt-10 px-2 sm:px-6">
-            <span class="inline-block py-1 px-2 rounded-full bg-green-600 text-white  text-xs font-bold tracking-widest mb-2">Featured Courses</span>
+            <span class="inline-block py-1 px-2 rounded-full bg-green-300 text-gray-900 text-xs font-bold tracking-widest mb-2">Featured Courses</span>
             <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-100">Before they sold out
               <br class="hidden lg:inline-block" />readymade gluten
             </h1>
-            <p class="text-indigo-200 text-base pb-6">From local banks to local government, we partner with organizations on their journey to digital transformation. Our customers include 15 million professionals in 175 countries and 800 of the fortune 1000.</p>
-            <p class="text-indigo-200 text-base pb-8">We can't believe how far we have come in the last 6 months. I really did not think this awesome career move would come so quickly. Thanks to each of you put into SI and the partner relationships.</p>
+            <p class="text-indigo-100 text-base pb-6">From local banks to local government, we partner with organizations on their journey to digital transformation. Our customers include 15 million professionals in 175 countries and 800 of the fortune 1000.</p>
+            <p class="text-indigo-100 text-base pb-8">We can't believe how far we have come in the last 6 months. I really did not think this awesome career move would come so quickly. Thanks to each of you put into SI and the partner relationships.</p>
             <div class="flex items-center justify-between">
               <div class="flex items-center pb-12">
                 <div class="h-12 w-12">
@@ -335,72 +81,7 @@
   </Link>
   </div>
 </section>
-<section class="w-full bg-gradient-to-b from-gray-100 to-white">
-  <div class="w-full px-4 py-20 mx-auto text-left md:text-center md:w-3/4 lg:w-2/4">
-    <p class="mb-2 text-base font-semibold text-purple-700">Start your free trial now</p>
-    <h2 class="mb-6 text-3xl font-extrabold tracking-tight md:text-4xl md:mb-6 md:leading-tight">Sign up for a free account to organize your customer feedback.</h2>
-    <div class="mb-0 space-x-0 md:space-x-2">
-      <a class="inline-flex items-center justify-center w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0" href="#">
-        Get Started
-        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-        </svg>
-      </a>
-      <a class="inline-flex items-center justify-center w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0" href="#">
-        Book a Demo
-        <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-          <path
-            fill-rule="evenodd"
-            d="M6.672 1.911a1 1 0 10-1.932.518l.259.966a1 1 0 001.932-.518l-.26-.966zM2.429 4.74a1 1 0 10-.517 1.932l.966.259a1 1 0 00.517-1.932l-.966-.26zm8.814-.569a1 1 0 00-1.415-1.414l-.707.707a1 1 0 101.415 1.415l.707-.708zm-7.071 7.072l.707-.707A1 1 0 003.465 9.12l-.708.707a1 1 0 001.415 1.415zm3.2-5.171a1 1 0 00-1.3 1.3l4 10a1 1 0 001.823.075l1.38-2.759 3.018 3.02a1 1 0 001.414-1.415l-3.019-3.02 2.76-1.379a1 1 0 00-.076-1.822l-10-4z"
-            clip-rule="evenodd"
-            />
-        </svg>
-      </a>
-    </div>
-  </div>
-</section>
-<div class="w-full bg-gray-800">
-  <section class="px-4 py-24 mx-auto max-w-7xl bg-gray-800">
-    <h1 class="mb-3 text-3xl font-bold leading-tight text-center text-gray-200 md:text-4xl">Trusted by 5200+, built by 17</h1>
-    <p class="mb-16 text-lg text-center text-gray-200">Organizations of all sizes trust Hellonext to manage customer feedback</p>
-    <div class="grid grid-cols-2 gap-16 mb-16 text-center lg:grid-cols-6">
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 2x"
-             class="block object-contain h-16" alt="Sport Diver" width="164" height="34">
-      </div>
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diver-life@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diver-life@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diver-life@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diver-life@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diver-life@3x.png 2x"
-             class="block object-contain h-16" alt="Scuba Diver Life" width="144" height="58">
-      </div>
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diving@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diving@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diving@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diving@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-scuba-diving@3x.png 2x"
-             class="block object-contain h-16" alt="Scuba Diving" width="154" height="42">
-      </div>
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-international-business-times@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-international-business-times@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-international-business-times@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-international-business-times@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-international-business-times@3x.png 2x"
-             class="block object-contain h-16" alt="International Business Times" width="146" height="60">
-      </div>
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-mail-online@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-mail-online@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-mail-online@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-mail-online@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-mail-online@3x.png 2x"
-             class="block object-contain h-16" alt="Mail Online" width="196" height="34">
-      </div>
-      <div class="flex items-center justify-center">
-        <img src="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png"
-             srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 2x"
-             data-srcset="//d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 1x, //d2cz0wk7mo1cab.cloudfront.net/img/logo-sportdiver@3x.png 2x"
-             class="block object-contain h-16" alt="Sport Diver" width="164" height="34">
-      </div>
-    </div>
-  </section>
-</div>
+<%= render 'partials/signup' %>
+  <%= render 'partials/featured' %>
+    <%= render 'partials/press' %>
 

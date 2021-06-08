@@ -35,7 +35,7 @@ ActiveAdmin.register Location do
     actions
   end
 
-  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :mindepth, :maxdepth, :visibility, :currents, :main_image, :is_spec, :gps, :desc
+  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :depth, :mindepth, :maxdepth, :visibility, :currents, :main_image, :is_spec, :gps, :desc
 
 
   form do |f| #This is formtastic form builder
