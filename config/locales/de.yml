@@ -29,10 +29,9 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  Doma: "Home"
-  Centri: "Centers"
-  Lokacije: "Locations"
-  Kontakt: "Contact"
-  Bookiraj: "Book Now"
+de:
+  hello: "Hallo Welt"
+  Doma: "Seite"
+  Centri: "Zentren"
+  Lokacije: "Standorte"
+  Kontakt: "Kontakt"

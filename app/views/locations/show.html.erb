@@ -1,26 +1,4 @@
-<div class="p-4 w-full items-center bg-gray-300">
-  <div class="grid grid-cols-12 gap-4">
-    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-      <div class="flex flex-row bg-white shadow-sm rounded p-4">
-
-      </div>
-    </div>
-    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-      <div class="flex flex-row bg-white shadow-sm rounded p-4">
-
-      </div>
-    </div>
-    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-      <div class="flex flex-row bg-white shadow-sm rounded p-4">
-
-      </div>
-    </div>
-    <div class="col-span-12 sm:col-span-6 md:col-span-3">
-      <div class="flex flex-row bg-white shadow-sm rounded p-4">
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'partials/palete' %>
 <div class="flex min-h-auto bg-white">
   <div class="md:w-1/2 max-w-lg mx-auto my-2 px-4 py-3 shadow-none">
     <h1 class="text-4xl font-bold mt-4"><%= @location.name  %></h1>
@@ -112,12 +90,14 @@
               <p class="font-medium text-gray-300"><strong class="font-bold text-green-200">Struje:</strong> <%=@location.currents %></p>
             </li>
           </ul>
-          <button
-            type="submit"
-            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
-          >
-            Rezerviraj
-          </button>
+           <%= form_for([@location, @location.reservations.new]) do |f| %>
+            <%= f.text_field :start_date %>
+            <%= f.text_field :end_date %>
+            <%= f.hidden_field :location_id, value: @location.id %>
+            <%#= f.hidden_field :price, value: @location.price %>
+            <br>
+            <%= f.submit "Book Now", class:"inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none" %>
+               <% end %>
           <div>
             <ul class="flex flex-col divide divide-y pt-6">
               <div class="text-md uppercase font-bold text-gray-300 tracking-wide mb-6">Ronilački centri</div>

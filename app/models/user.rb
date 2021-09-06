@@ -10,6 +10,8 @@ class User < ApplicationRecord
   validates :password, :password_confirmation, presence: true, on: :create
   validates :password, confirmation: true
 
+  has_many :reservations
+
   # Virtual Attributes
   def first_name
     self.name.split.first

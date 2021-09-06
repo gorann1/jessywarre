@@ -4,4 +4,5 @@ class Center < ApplicationRecord
   belongs_to :region
   has_many :assignments
   has_many :locations, :through => :assignments
+  has_many :reservations
 end

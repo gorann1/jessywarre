@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_07_135108) do
+ActiveRecord::Schema.define(version: 2021_07_09_115936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -175,6 +175,21 @@ ActiveRecord::Schema.define(version: 2021_06_07_135108) do
     t.index ["zone_id"], name: "index_regions_on_zone_id"
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "center_id", null: false
+    t.bigint "location_id", null: false
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "price"
+    t.integer "total"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["center_id"], name: "index_reservations_on_center_id"
+    t.index ["location_id"], name: "index_reservations_on_location_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
   create_table "types", force: :cascade do |t|
     t.string "name"
     t.text "desc"
@@ -224,4 +239,7 @@ ActiveRecord::Schema.define(version: 2021_06_07_135108) do
   add_foreign_key "locations", "zones"
   add_foreign_key "regions", "countries"
   add_foreign_key "regions", "zones"
+  add_foreign_key "reservations", "centers"
+  add_foreign_key "reservations", "locations"
+  add_foreign_key "reservations", "users"
 end
