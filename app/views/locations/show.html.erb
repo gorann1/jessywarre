@@ -69,7 +69,7 @@
                   <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
                 </svg>
               </div>
-              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200">Dubina:</strong> <%=@location.depth %>m</p>
+              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200"><%= t 'Dubina' %>:</strong> <%=@location.depth %>m</p>
             </li>
             <li class="flex items-center">
               <div class="mr-3">
@@ -78,7 +78,7 @@
                   <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
                 </svg>
               </div>
-              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200">Vidljivost:</strong> <%=@location.visibility %></p>
+              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200"><%= t 'Vidljivost' %>:</strong> <%=@location.visibility %></p>
             </li>
             <li class="flex items-center">
               <div class="mr-3">
@@ -87,7 +87,7 @@
                   <circle cx="12" cy="12" fill="none" r="11" stroke="currentColor"></circle>
                 </svg>
               </div>
-              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200">Struje:</strong> <%=@location.currents %></p>
+              <p class="font-medium text-gray-300"><strong class="font-bold text-green-200"><%= t 'Struje' %>:</strong> <%=@location.currents %></p>
             </li>
           </ul>
            <%= form_for([@location, @location.reservations.new]) do |f| %>
@@ -100,7 +100,7 @@
                <% end %>
           <div>
             <ul class="flex flex-col divide divide-y pt-6">
-              <div class="text-md uppercase font-bold text-gray-300 tracking-wide mb-6">Ronilački centri</div>
+              <div class="text-md uppercase font-bold text-gray-300 tracking-wide mb-6"><%= t 'Ronilački centri' %></div>
               <% @location.centers.each do |cc|%>
                 <li class="flex flex-row bg-gray-100 rounded-lg shadow-sm mb-4">
                   <div class="select-none cursor-pointer flex flex-1 items-center p-4">

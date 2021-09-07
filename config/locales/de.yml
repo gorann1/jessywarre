@@ -30,8 +30,19 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 de:
-  hello: "Hallo Welt"
   Doma: "Seite"
   Centri: "Zentren"
   Lokacije: "Standorte"
   Kontakt: "Kontakt"
+  Bookiraj: "Buchen"
+
+  # Lokacije
+
+  Dubina: "Tiefe"
+  Vidljivost: "Sichtweite"
+  Struje: "Meeresströmungen"
+  Ronilački centri: "Tauchzentren"
+  Knausgaard typewriter readymade marf: "Willkommen beim Tauchbuchungsportal"
+  Chillwave portland ugh, knausgaard fam polaroid iPhone Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher: "Chillwave portland uh, knausgaard fam Polaroid iPhone Mann Zopf Swag Schreibmaschine Affogato, Hella Selvage Wolf Narwal Traumfänger"
+  hello: "Hallo Welt"
+
