@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /en|de/ do
+  scope "(:locale)", locale: /hr|en|de/ do
   get 'contact', to: 'contacts#index'
   devise_scope :user do
     authenticated :user do
