@@ -65,6 +65,9 @@
                  <%= active_link_to t('Kontakt'), contact_path, class_active: 'enabled', class:"inline-block py-2 px-4 text-gray-300 hover:text-white no-underline" %>
                  </li>
                  <li class="mr-3">
+                   <%= active_link_to 'Hrvatski', url_for(locale: :hr), class_active: 'enabled', class:"inline-block py-2 px-4 text-gray-300 hover:text-white no-underline" %>
+                 </li>
+                 <li class="mr-3">
                    <%= active_link_to 'Engleski', url_for(locale: :en), class_active: 'enabled', class:"inline-block py-2 px-4 text-gray-300 hover:text-white no-underline" %>
                  </li>
                  <li class="mr-3">

@@ -30,11 +30,27 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 de:
+  activerecord:
+    models:
+      location: 'Standorte'
+    attributes:
+      location:
+        desc
+  welcome:
+    index:
+      Dobrodošli!: 'Willcomen!'
+  partials:
+    steps:
+      The: 'Der'
+      quick, brown fox jumps over a lazy dog: 'schnelle braune Fuchs springt über einen faulen Hund'
   Doma: "Seite"
   Centri: "Zentren"
   Lokacije: "Standorte"
   Kontakt: "Kontakt"
+  Engleski: "Englisch"
   Bookiraj: "Buchen"
+  Button: "Taste"
+  Placeholder: "Platzhalter"
 
   # Lokacije
 

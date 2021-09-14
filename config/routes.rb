@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /hr|en|de/ do
+  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
+
   get 'contact', to: 'contacts#index'
   devise_scope :user do
     authenticated :user do
@@ -32,7 +33,6 @@ Rails.application.routes.draw do
   resources :locations do
     resources :reservations, only: [:create]
   end
-  end
 
   ActiveAdmin.routes(self)
   devise_for :users, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "register" }
@@ -48,3 +48,4 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
 
 end
+  end
