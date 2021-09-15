@@ -1,5 +1,8 @@
 class Location < ApplicationRecord
   include ActionView::Helpers::TextHelper
+  extend Mobility
+
+  translates :desc, type: :text
 
   belongs_to :zone
   belongs_to :country

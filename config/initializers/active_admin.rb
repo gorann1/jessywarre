@@ -39,9 +39,21 @@ ActiveAdmin.setup do |config|
   # a namespace block. For example, to change the site title
   # within a namespace:
 
-  #config.namespace :admin do |admin|
+  config.namespace :admin do |admin|
+    admin.build_menu :utility_navigation do |menu|
+      menu.add :label => "Languages" do |lang|
+        lang.add :label => "Hrvatski",:url => proc { url_for(:locale => 'hr') }, id: 'i18n-hr', :priority => 1
+        lang.add :label => "English",:url => proc { url_for(:locale => 'en') }, id: 'i18n-en', :priority => 2
+        lang.add :label => "Deutsch",:url => proc { url_for(:locale => 'de') }, id: 'i18n-de', :priority => 3
+      end
 
-  #end
+      menu.add :label => proc { display_name current_active_admin_user },
+               :url => '#',
+               :id => 'current_user',
+               :if => proc { current_active_admin_user? }
+      admin.add_logout_button_to_menu menu
+    end
+  end
 
   #   config.namespace :admin do |admin|
   #     admin.site_title = "Custom Admin Title"

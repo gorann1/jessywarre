@@ -12,9 +12,16 @@ module Myapp
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-    config.i18n.available_locales = [:hr, :en, :de]
+
+    # Don't generate system test files
+
+    config.generators.system_tests = nil
+
     config.i18n.default_locale = :hr
+    config.i18n.available_locales = [:hr, :en, :de]
     config.i18n.fallbacks = true
+
+    # Config Host
     Rails.application.config.hosts << "scubabooker.eu"
 
     # Settings in config/environments/* take precedence over those specified here.
