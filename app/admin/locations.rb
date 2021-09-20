@@ -35,7 +35,7 @@ ActiveAdmin.register Location do
     actions
   end
 
-  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :depth, :mindepth, :maxdepth, :visibility, :currents, :main_image, :is_spec, :gps, :desc
+  permit_params :zone_id, :country_id, :region_id, :category_id, :type_id, :name, :lat, :lng, :depth, :mindepth, :maxdepth, :visibility, :currents, :main_image, :is_spec, :gps, :desc, images:[]
 
 
   form do |f| #This is formtastic form builder
@@ -63,7 +63,7 @@ ActiveAdmin.register Location do
                                                                  ['image'],
                                                                  ['video']] },
                                                           theme: 'snow' } } }, label: 'The content of the location description'
-  f.input :images, as: :file, input_html: { multiple: true }, label: 'Add illustrations to the article'
+  f.input :images, as: :file, input_html: { multiple: true }, label: 'Add gallery to the article'
   f.actions         # adds the 'Submit' and 'Cancel' buttons
   end
 end

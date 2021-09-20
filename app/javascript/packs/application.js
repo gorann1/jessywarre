@@ -8,6 +8,8 @@
 //= require jquery
 //= require jquery-ui
 //= require_tree .
+//= require leaflet
+
 
 
 require("@rails/ujs").start();
@@ -17,11 +19,14 @@ require("channels");
 require("../stylesheets/global.scss");
 
 import JQuery from 'jquery'
+import 'leaflet'
 window.$ = window.JQuery = JQuery
 import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
 window.toastr = toastr
 //import "./quill-editor.js"
+import "lightgallery.js/dist/css/lightgallery.min.css"
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -37,5 +42,6 @@ ReactRailsUJS.useContext(componentRequireContext);
 require("trix")
 require("@rails/actiontext")
 import "controllers"
+
 
 

@@ -2,10 +2,11 @@
 Rails.application.routes.draw do
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
-  get 'contact', to: 'contacts#index'
+
   devise_scope :user do
     authenticated :user do
       root 'welcome#index', as: :authenticated_root
+      get 'welcome/index'
     end
 
     unauthenticated do
@@ -37,9 +38,12 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users, path: "", path_names: { sign_in: "login", sign_out: "logout", sign_up: "register" }
   get 'pages/home'
-  get 'onama', to: 'pages#about'
-  get 'uvjeti', to: 'pages#terms'
-  get 'welcome/index'
+
+  # STATIC PAGES
+  get 'contact', to: 'contacts#index'
+  get 'about', to: 'pages#about'
+  get 'terms', to: 'pages#terms'
+
   resources :articles do
     resources :comments
   end

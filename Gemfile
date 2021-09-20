@@ -55,10 +55,7 @@ gem 'jquery-turbolinks', '~> 2.1'
 gem 'activeadmin_quill_editor'
 gem 'rails-i18n'
 gem 'mobility', '~> 1.1.3'
-
-
-
-
+gem 'leaflet-rails'
 
 
 # Image uploads

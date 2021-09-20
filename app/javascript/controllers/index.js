@@ -3,8 +3,11 @@
 
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
+import Lightbox from "stimulus-lightbox"
+
 
 const application = Application.start()
+application.register("lightbox", Lightbox)
 
 // Tu je bilo controller
 const context = require.context(".", true, /\.js$/)

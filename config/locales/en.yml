@@ -31,8 +31,19 @@
 
 en:
   hello: "Hello world"
+  Uvjeti: "Terms"
   Doma: "Home"
   Centri: "Centers"
   Lokacije: "Locations"
   Kontakt: "Contact"
   Bookiraj: "Book Now"
+  O nama: 'About Us'
+#  Hrvatski: "Croatian"
+#  Engleski: 'English'
+#  Njemački: 'Deutsch'
+  Dobrodošli na Scubabooker, najkompletniju web aplikaciju za bookiranje urona: 'Welcome To Scubabooker, The Most Complete Dive Booking App'
+
+# Lokacije
+  Dubina: "Depth"
+  Vidljivost: "Visibility"
+  Struje: "Currents"

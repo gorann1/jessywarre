@@ -47,10 +47,13 @@ de:
   Centri: "Zentren"
   Lokacije: "Standorte"
   Kontakt: "Kontakt"
-  Engleski: "Englisch"
   Bookiraj: "Buchen"
   Button: "Taste"
   Placeholder: "Platzhalter"
+  Uvjeti: "Bedingungen"
+#  Hrvatski: 'Kroatisch'
+#  English: 'Englisch'
+
 
   # Lokacije
 
@@ -58,7 +61,7 @@ de:
   Vidljivost: "Sichtweite"
   Struje: "Meeresströmungen"
   Ronilački centri: "Tauchzentren"
-  Knausgaard typewriter readymade marf: "Willkommen beim Tauchbuchungsportal"
+  Dobrodošli na Scubabooker, najkompletniju web aplikaciju za bookiranje urona: "Willkommen bei Scubabooker, der umfassendsten Tauchbuchungsanwendung"
   Chillwave portland ugh, knausgaard fam polaroid iPhone Man braid swag typewriter affogato, hella selvage wolf narwhal dreamcatcher: "Chillwave portland uh, knausgaard fam Polaroid iPhone Mann Zopf Swag Schreibmaschine Affogato, Hella Selvage Wolf Narwal Traumfänger"
   hello: "Hallo Welt"
 

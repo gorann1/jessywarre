@@ -3,6 +3,8 @@ class Location < ApplicationRecord
   extend Mobility
 
   translates :desc, type: :text
+  translates :currents, type: :string
+  translates :visibility, type: :string
 
   belongs_to :zone
   belongs_to :country
@@ -12,6 +14,8 @@ class Location < ApplicationRecord
   has_many :assignments
   has_many :centers, :through => :assignments
   has_one_attached :main_image
+  has_many_attached :images
+
   has_rich_text :body
   has_many :reservations
 
