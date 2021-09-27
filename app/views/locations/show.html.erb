@@ -47,10 +47,17 @@
 
     <%#= image_tag url_for(location), :class => "locations" %>
     <%#= image_tag @location.new_images, class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center" %>
+<!--    <div data-controller="lightbox" class="images" data-lightbox-options-value='{"controls": true, "loop":true}'>
+      <%# (0...@location.images.count).each do |im| %>
+        <%#= image_tag (@location.images[im]), class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center object-cover" %>
+    <%# end %>
+    </div>-->
     <div data-controller="lightbox" class="images" data-lightbox-options-value='{"controls": true, "loop":true}'>
       <% (0...@location.images.count).each do |im| %>
-        <%= image_tag (@location.images[im]), class: "h-72 w-full rounded-lg shadow-md bg-cover mt-8 bg-center object-cover" %>
-    <% end %>
+        <%= link_to (@location.images[im]), data: { action: 'gallery#onImageClick', target: 'gallery.picture' } do %>
+          <%= image_tag (@location.images[im]) %>
+        <% end %>
+      <% end %>
     </div>
     <div class="grid mt-4 pt-4 max-w-screen-md gap-10 md:grid-cols-1 sm:mx-auto">
       <div>

@@ -7,8 +7,10 @@ import Lightbox from "stimulus-lightbox"
 
 
 const application = Application.start()
-application.register("lightbox", Lightbox)
 
 // Tu je bilo controller
 const context = require.context(".", true, /\.js$/)
 application.load(definitionsFromContext(context))
+
+
+application.register('lightbox', Lightbox)
