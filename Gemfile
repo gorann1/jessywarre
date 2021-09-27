@@ -56,6 +56,7 @@ gem 'activeadmin_quill_editor'
 gem 'rails-i18n'
 gem 'mobility', '~> 1.1.3'
 gem 'leaflet-rails'
+gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
 
 
 # Image uploads
