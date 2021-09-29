@@ -17,6 +17,24 @@
  */
 
 
-//$pswp__assets-path: '~photoswipe/src/css/default-skin/';
-/*@import 'photoswipe/src/css/main';
-@import 'photoswipe/src/css/default-skin/default-skin';*/
+/*
+
+
+#gallery--custom-html-markup a {
+  width: 100px;
+  height: 100px;
+
+  background-size: cover;
+  background-position: 50% 50%;
+
+  text-indent: -300px;
+  overflow: hidden;
+}
+*/
+
+// Specifying pswp__assets-path might not be needed - it depends on your webpack config
+// Please read: https://github.com/rails/webpacker/blob/master/docs/css.md#resolve-url-loader
+// for references regarding url resolver
+$pswp__assets-path: 'photoswipe/src/css/default-skin/';
+@import 'photoswipe/src/css/main';
+@import 'photoswipe/src/css/default-skin/default-skin';

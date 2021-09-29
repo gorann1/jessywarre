@@ -1,0 +1,18 @@
+
+<div class="flex items-center w-screen min-h-screen p-10">
+  <!-- Resice the preview panel to check the responsiveness -->
+
+  <!-- Component Start -->
+  <div class="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-2 max-w-6xl">
+    <!-- Tile 1 -->
+    <div class="flex flex-col bg-gray-200 rounded-lg p-4 m-2">
+        <div data-controller="lightbox"  id="my_gallery" class="images" data-lightbox-options-value='{"controls": true, "loop":true}'>
+          <% (0...@location.images.count).each do |im| %>
+            <%= link_to (@location.images[im]), data: { action: 'gallery#onImageClick', target: 'gallery.picture' } do %>
+              <%= image_tag (@location.images[im]) %>
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
+// gallery_controller.js
 import {Controller} from 'stimulus'
 import * as PhotoSwipe from 'photoswipe'
-import * as PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default'
+import * as PhotoSwipeUI_Default from '../packs/photoswipe-ui-default'
 
 export default class extends Controller {
     static targets = ['picture']

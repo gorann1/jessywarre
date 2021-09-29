@@ -16,3 +16,16 @@ img {
   cursor: pointer;
 }
 */
+button.pswp__button--test-button {
+  background: #136912 !important;
+  font-size: 20px;
+  color: #fff;
+}
+
+#my-gallery {
+  display: inline-flex;
+
+  a {
+    padding: 10px;
+  }
+}

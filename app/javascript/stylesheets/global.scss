@@ -12,6 +12,18 @@
 @import "pagy";
 @import "location";
 
+@layer utilities {
+  @variants responsive {
+    .masonry {
+      column-gap: 1.5em;
+      column-count: 2;
+    }
+    .break-inside {
+      break-inside: avoid;
+    }
+  }
+}
+
 nav.pagy-nav {
   margin-top: 2rem;
 }
