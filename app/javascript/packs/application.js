@@ -19,6 +19,7 @@ require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
 require("../stylesheets/global.scss");
+require("controllers")
 
 import JQuery from 'jquery'
 import 'leaflet'
@@ -43,7 +44,10 @@ ReactRailsUJS.useContext(componentRequireContext);
 
 require("trix")
 require("@rails/actiontext")
+require("@hotwired/turbo-rails")
 import "controllers"
+//import "../coffee/countries.js"
+
 
 
 

@@ -1,4 +1,5 @@
 const { environment } = require('@rails/webpacker')
+const coffee =  require('./loaders/coffee')
 
 const path = require('path')
 
@@ -12,4 +13,5 @@ environment.config.merge({
     }
 })
 
+environment.loaders.prepend('coffee', coffee)
 module.exports = environment

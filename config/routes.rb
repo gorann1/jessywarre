@@ -23,7 +23,13 @@ Rails.application.routes.draw do
     get :up
   end
 
-  resources :locations
+  resources :locations do
+    collection do
+      get :regions
+
+    end
+  end
+
   get 'locations', to: 'locations#index'
   get '/locations/:id', to: 'locations#show'
 

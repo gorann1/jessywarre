@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
     #Location.order('id ASC').reorder('name DESC')
     @q = Location.ransack(params[:q])
     @q.sorts = ['name asc', 'created_at desc'] if @q.sorts.empty?
-    @locations = @q.result
+    @locations = @q.result.includes(:countries, :regions)
     @pagy, @locations = pagy(@q.result, items: 12)
     # @locations = @q.result.includes(:category)
     @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
@@ -13,7 +13,6 @@ class LocationsController < ApplicationController
       marker.lng location.lng
     end
   end
-
 
   def show
     @location = Location.find(params[:id])
@@ -23,5 +22,7 @@ class LocationsController < ApplicationController
     end
 
   end
+
+
 
 end
