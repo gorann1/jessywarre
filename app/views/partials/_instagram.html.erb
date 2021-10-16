@@ -1,31 +1,31 @@
- <section class="pt-8 px-4">
-   <div class="flex flex-wrap -mx-4">
-     <div data-controller="gallery" id="my-gallery">
-     <% (0...@location.images.count).each do |im| %>
-         <%= link_to (@location.images[im]), data: { action: 'gallery#onImageClick', target: 'gallery.picture' } do %>
-           <%= image_tag (@location.images[im]) %>
-         <% end %>
-     <% end %>
-     </div>
-   </div>
- </section>
- <script type="module">
-     // Include Lightbox
-     import PhotoSwipeLightbox from '/v5/photoswipe/photoswipe-lightbox.esm.js';
+<section class="pt-8 px-4">
+  <div class="flex flex-wrap -mx-4">
+    <div data-controller="gallery" id="my-gallery">
+      <% (0...@location.images.count).each do |im| %>
+        <%= link_to (@location.images[im]), data: { action: 'gallery#onImageClick', target: 'gallery.picture' } do %>
+          <%= image_tag (@location.images[im]) %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>
+<script type="module">
+    // Include Lightbox
+    import PhotoSwipeLightbox from '/v5/photoswipe/photoswipe-lightbox.esm.js';
 
-     const lightbox = new PhotoSwipeLightbox(options);
-     lightbox.on('uiRegister', function() {
-         lightbox.pswp.ui.registerElement({
-             name: 'test-button',
-             order: 9,
-             isButton: true,
-             html: 'Test',
-             onClick: (event, el) => {
-                 if ( confirm('Do you want to toggle zoom?') ) {
-                     lightbox.pswp.toggleZoom();
-                 }
-             }
-         });
-     });
-     lightbox.init();
- </script>
+    const lightbox = new PhotoSwipeLightbox(options);
+    lightbox.on('uiRegister', function() {
+        lightbox.pswp.ui.registerElement({
+            name: 'test-button',
+            order: 9,
+            isButton: true,
+            html: 'Test',
+            onClick: (event, el) => {
+                if ( confirm('Do you want to toggle zoom?') ) {
+                    lightbox.pswp.toggleZoom();
+                }
+            }
+        });
+    });
+    lightbox.init();
+</script>

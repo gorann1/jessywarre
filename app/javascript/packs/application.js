@@ -10,6 +10,7 @@
 //= require_tree .
 //= require leaflet
 //= require photoswipe
+//= require lightbox
 
 
 
@@ -28,7 +29,7 @@ import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
 window.toastr = toastr
 //import "./quill-editor.js"
-//import "lightgallery.js/dist/css/lightgallery.min.css"
+import "lightgallery.js/dist/css/lightgallery.min.css"
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

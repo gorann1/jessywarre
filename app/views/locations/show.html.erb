@@ -1,4 +1,6 @@
 <%= render 'partials/palete' %>
+<div style="margin: auto; width: 25%; padding: 10px">
+</div>
 <div class="flex min-h-auto bg-white">
   <div class="md:w-1/2 max-w-lg mx-auto my-2 px-4 py-3 shadow-none">
     <h1 class="text-4xl font-bold mt-4"><%= @location.name  %></h1>
@@ -156,7 +158,7 @@
     </div>
   </div>
   <div id="map" class="md:w-1/2"></div>
-  <script type="text/javascript">
+ <!-- <script type="text/javascript">
       handler = Gmaps.build('Google');
       handler.buildMap({
               provider: {
@@ -170,13 +172,13 @@
               }
           },
           function(){
-              markers = handler.addMarkers(<%=raw @hash.to_json %>);
+              markers = handler.addMarkers(<%#=raw @hash.to_json %>);
 
               handler.bounds.extendWith(markers);
               handler.fitMapToBounds();
           }
       );
-  </script>
+  </script>-->
   <script type="module">
       import PhotoSwipeLightbox from '/v5/photoswipe/photoswipe-lightbox.esm.js';
       const lightbox = new PhotoSwipeLightbox({

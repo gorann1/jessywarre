@@ -1,3 +1,9 @@
+<div style="margin: auto; width: 25%; padding: 10px">
+  <h1>Autocomplete</h1>
+  <div data-controller="autocomplete">
+    <input data-target="autocomplete.field" />
+  </div>
+</div>
 <div class="container px-6 py-10 mx-auto">
     <%= search_form_for @q do |f| %>
       <div class="bg-white flex items-center rounded-full shadow-md border-w-0">
@@ -32,23 +38,24 @@
   </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-    var contsel = "#" + $.escapeSelector('q_country_id_eq');
-    var townsel = "#" + $.escapeSelector('q_region_id_eq');
-    $(contsel).change(function() {
-        var townsel = "#" + $.escapeSelector('q_region_id_eq');
-        var contsel = "#" + $.escapeSelector('q_country_id_eq');
-        var country = $.escapeSelector($(contsel + ' :selected').text());
-        var towns = $(townsel).html();
-        var options = $(towns).filter("optgroup[label='" + country + "']").html();
-        if (options) {
-            $(townsel).parent().show();
-            $(townsel).show();
-            $(townsel + " optgroup").hide();
-            $(townsel + " optgroup[label='" + country + "']").show();
-            $(townsel).find('option:selected').prop("selected", false);
-        } else {
-            $(townsel).hide();
-            $(townsel).parent().hide();
-        }
-    })
+    // var contsel = "#" + $.escapeSelector('q_country_id_eq');
+    // var townsel = "#" + $.escapeSelector('q_region_id_eq');
+    // $(townsel).parent().show();
+    // $(contsel).change(function() {
+    //     var townsel = "#" + $.escapeSelector('q_region_id_eq');
+    //     var contsel = "#" + $.escapeSelector('q_country_id_eq');
+    //     var country = $.escapeSelector($(contsel + ' :selected').text());
+    //     var towns = $(townsel).html();
+    //     var options = $(towns).filter("optgroup[label='" + country + "']").html();
+    //     if (options) {
+    //         $(townsel).parent().show();
+    //         $(townsel).show();
+    //         $(townsel + " optgroup").hide();
+    //         $(townsel + " optgroup[label='" + country + "']").show();
+    //         $(townsel).find('option:selected').prop("selected", false);
+    //     } else {
+    //         $(townsel).hide();
+    //         $(townsel).parent().hide();
+    //     }
+    // })
 </script>
