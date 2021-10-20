@@ -58,6 +58,8 @@ gem 'mobility', '~> 1.1.3'
 gem 'leaflet-rails'
 gem 'hotwire-rails'
 #gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
+gem "http"
+
 
 
 # Image uploads

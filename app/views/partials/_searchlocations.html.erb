@@ -1,9 +1,3 @@
-<div style="margin: auto; width: 25%; padding: 10px">
-  <h1>Autocomplete</h1>
-  <div data-controller="autocomplete">
-    <input data-target="autocomplete.field" />
-  </div>
-</div>
 <div class="container px-6 py-10 mx-auto">
     <%= search_form_for @q do |f| %>
       <div class="bg-white flex items-center rounded-full shadow-md border-w-0">
@@ -14,7 +8,7 @@
           </button>
         </div>
       </div>
-      <div data-controller="country" class="grid gap-4 mt-6 sm:grid-cols-2 md:grid-cols-5">
+    <div data-controller="country" class="grid gap-4 mt-6 sm:grid-cols-2 md:grid-cols-5">
         <%= f.collection_select :zone_id_eq, Zone.order(:name), :id, :name,
                                 class:"border-gray-100 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
                                 :prompt => 'Zona' %>
@@ -38,24 +32,54 @@
   </div>
 </div>
 <script type="text/javascript" charset="utf-8">
-    // var contsel = "#" + $.escapeSelector('q_country_id_eq');
-    // var townsel = "#" + $.escapeSelector('q_region_id_eq');
-    // $(townsel).parent().show();
-    // $(contsel).change(function() {
-    //     var townsel = "#" + $.escapeSelector('q_region_id_eq');
-    //     var contsel = "#" + $.escapeSelector('q_country_id_eq');
-    //     var country = $.escapeSelector($(contsel + ' :selected').text());
-    //     var towns = $(townsel).html();
-    //     var options = $(towns).filter("optgroup[label='" + country + "']").html();
-    //     if (options) {
-    //         $(townsel).parent().show();
-    //         $(townsel).show();
-    //         $(townsel + " optgroup").hide();
-    //         $(townsel + " optgroup[label='" + country + "']").show();
-    //         $(townsel).find('option:selected').prop("selected", false);
-    //     } else {
-    //         $(townsel).hide();
-    //         $(townsel).parent().hide();
-    //     }
-    // })
+    var contsel = "#" + $.escapeSelector('q_country_id_eq');
+    var townsel = "#" + $.escapeSelector('q_region_id_eq');
+    $(townsel).parent().show();
+    $(contsel).change(function() {
+        var townsel = "#" + $.escapeSelector('q_region_id_eq');
+        var contsel = "#" + $.escapeSelector('q_country_id_eq');
+        var country = $.escapeSelector($(contsel + ' :selected').text());
+        var towns = $(townsel).html();
+        var options = $(towns).filter("optgroup[label='" + country + "']").html();
+        if (options) {
+            $(townsel).parent().show();
+            $(townsel).show();
+            $(townsel + " optgroup").hide();
+            $(townsel + " optgroup[label='" + country + "']").show();
+            $(townsel).find('option:selected').prop("selected", false);
+        } else {
+            $(townsel).hide();
+            $(townsel).parent().hide();
+        }
+    })
+</script>
+<script type="text/javascript" charset="utf-8">
+    $("#q_region_id_eq").prop("disabled", true); // second dropdown is disable while first dropdown is empty
+    $("#q_country_id_eq").change(function(){
+        var country = $(this).val();
+        if(country == ''){
+            $("#q_region_id_eq").prop("disabled", true);
+        }else{
+            $("#q_region_id_eq").prop("disabled", false);
+        }
+        $.ajax({
+            url: "/locations",
+            method: "GET",
+            dataType: "json",
+            data: {country: country},
+            error: function (xhr, status, error) {
+                console.error('AJAX Error: ' + status + error);
+            },
+            success: function (response) {
+                console.log(response);
+                var tasks = response["regions"];
+                $("#q_region_id_eq").empty();
+
+                $("#q_region_id_eq").append('<option>Select Region</option>');
+                for(var i = 0; i < regions.length; i++){
+                    $("#q_region_id_eq").append('<option value="' + regions[i]["id"] + '">' +regions[i]["name"] + '</option>');
+                }
+            }
+        });
+    });
 </script>

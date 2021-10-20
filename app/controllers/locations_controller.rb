@@ -6,6 +6,13 @@ class LocationsController < ApplicationController
     @q = Location.ransack(params[:q])
     @q.sorts = ['name asc', 'created_at desc'] if @q.sorts.empty?
     @locations = @q.result.includes(:countries, :regions)
+    if request.xhr?
+      respond_to do |format|
+        format.json {
+          render json: {locations: @locations}
+        }
+      end
+    end
     @pagy, @locations = pagy(@q.result, items: 12)
     # @locations = @q.result.includes(:category)
     @hash = Gmaps4rails.build_markers(@locations) do |location, marker|
