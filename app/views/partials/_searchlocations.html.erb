@@ -14,11 +14,11 @@
                                 :prompt => 'Zona' %>
         <%= f.collection_select :country_id_eq, Country.order(:name), :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
-                                :prompt => 'Odaberi Zemlju',
-                                data: { action: "change->country#change" } %>
+                                :prompt => 'Odaberi Zemlju'%>
         <%= f.grouped_collection_select :region_id_eq, Country.order(:name), :regions, :name, :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
-                                :prompt => 'Odaberi Regiju' %>
+                                        include_blank: true,
+                                        :prompt => 'Odaberi Regiju' %>
         <%= f.collection_select :type_id_eq, Type.order(:name), :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
                                 :prompt => 'Tip' %>
@@ -54,7 +54,6 @@
     })
 </script>
 <script type="text/javascript" charset="utf-8">
-    $("#q_region_id_eq").prop("disabled", true); // second dropdown is disable while first dropdown is empty
     $("#q_country_id_eq").change(function(){
         var country = $(this).val();
         if(country == ''){
