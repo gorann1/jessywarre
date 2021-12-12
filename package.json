@@ -55,6 +55,7 @@
     "select2": "^4.1.0-rc.0",
     "stimulus": "^2.0.0",
     "stimulus-lightbox": "^2.0.0",
+    "stimulus_reflex": "3.4.1",
     "tailwind.macro": "^0.5.10",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "tailwindcss-stimulus-components": "^2.2.0",

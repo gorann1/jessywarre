@@ -18,14 +18,15 @@
         <%= f.grouped_collection_select :region_id_eq, Country.order(:name), :regions, :name, :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
                                         include_blank: true,
+                                        "data-option-dependent" => true,
+                                        "data-option-observed" => "q_country_id_eq",
+                                        "data-option-key-method" => :id,
+                                        "data-option-value-method" => :name,
                                         :prompt => 'Odaberi Regiju' %>
         <%= f.collection_select :type_id_eq, Type.order(:name), :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
                                 :prompt => 'Tip' %>
-        <button
-          class="px-4 py-2 font-medium tracking-wide text-white capitalize bg-green-200 rounded hover:bg-green-300 focus:outline-none focus:bg-blue-500">
-          Traži
-        </button>
+      <%= f.submit "Traži", class:"px-4 py-2 font-medium tracking-wide text-white capitalize bg-green-200 rounded hover:bg-green-300 focus:outline-none focus:bg-blue-500" %>
         <%= link_to "Reset", request.path, class: "focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-yellow-500 hover:bg-yellow-600 hover:shadow-lg" %>
     <% end %>
     </div>
@@ -35,6 +36,7 @@
     var contsel = "#" + $.escapeSelector('q_country_id_eq');
     var townsel = "#" + $.escapeSelector('q_region_id_eq');
     $(townsel).parent().show();
+    $(townsel).hide();
     $(contsel).change(function() {
         var townsel = "#" + $.escapeSelector('q_region_id_eq');
         var contsel = "#" + $.escapeSelector('q_country_id_eq');
@@ -50,35 +52,8 @@
         } else {
             $(townsel).hide();
             $(townsel).parent().hide();
+            $(townsel + " optgroup[label='" + country + "']").hide();
+
         }
     })
-</script>
-<script type="text/javascript" charset="utf-8">
-    $("#q_country_id_eq").change(function(){
-        var country = $(this).val();
-        if(country == ''){
-            $("#q_region_id_eq").prop("disabled", true);
-        }else{
-            $("#q_region_id_eq").prop("disabled", false);
-        }
-        $.ajax({
-            url: "/locations",
-            method: "GET",
-            dataType: "json",
-            data: {country: country},
-            error: function (xhr, status, error) {
-                console.error('AJAX Error: ' + status + error);
-            },
-            success: function (response) {
-                console.log(response);
-                var tasks = response["regions"];
-                $("#q_region_id_eq").empty();
-
-                $("#q_region_id_eq").append('<option>Select Region</option>');
-                for(var i = 0; i < regions.length; i++){
-                    $("#q_region_id_eq").append('<option value="' + regions[i]["id"] + '">' +regions[i]["name"] + '</option>');
-                }
-            }
-        });
-    });
 </script>

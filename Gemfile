@@ -57,7 +57,7 @@ gem 'rails-i18n'
 gem 'mobility', '~> 1.1.3'
 gem 'leaflet-rails'
 gem 'hotwire-rails'
-#gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
+gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
 gem "http"
 
 
@@ -122,3 +122,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #gem "gem", "~> 0.0.1.alpha"
 gem "active_material", "~> 1.5"
+
+gem "stimulus_reflex", "~> 3.4"
