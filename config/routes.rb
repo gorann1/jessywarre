@@ -30,6 +30,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :regions, only: [:index]
   get 'locations', to: 'locations#index'
   get '/locations/:id', to: 'locations#show'
 

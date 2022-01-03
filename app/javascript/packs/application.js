@@ -47,7 +47,12 @@ require("trix")
 require("@rails/actiontext")
 require("@hotwired/turbo-rails")
 import "controllers"
+Rails.start()
 //import "../coffee/countries.js"
+
+    $(document).ready(function (){
+    $('select#q_country_id_eq').chainedTo('select#q_region_id_eq');
+});
 
 
 

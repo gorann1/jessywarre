@@ -87,9 +87,7 @@
             <% end %>
       <% end %>
     </div>
-    <%== pagy_nav(@pagy) %>
   </div>
-  <%== pagy_info(@pagy) %>
 </main>
 <%=render 'partials/photoswipe' %>
 
@@ -104,5 +102,28 @@
         accessToken: 'pk.eyJ1IjoiZ29yYW5uMSIsImEiOiJja3RxMTFpb3Mwcnp1Mm5xdWRwN2MzZzBnIn0.MnIdSx0hv-JEPsshltD2Kg'
     }).addTo(mymap);
 </script>-->
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function(){
+        var contsel = "#" + $.escapeSelector('q_country_id_eq');
+        var townsel = "#" + $.escapeSelector('q_region_id_eq');
+        $(contsel).change(function () {
+            var townsel = "#" + $.escapeSelector('q_region_id_eq');
+            var contsel = "#" + $.escapeSelector('q_country_id_eq');
+            var country = $.escapeSelector($(contsel + ' :selected').text());
+            var towns = $(townsel).html();
+            var options = $(towns).filter("optgroup[label='" + country + "']").html();
+            if (options) {
+                $(townsel).parent().show();
+                $(townsel).show();
+                $(townsel + " optgroup").hide();
+                $(townsel + " optgroup[label='" + country + "']").show();
+                $(townsel).find('option:selected').prop("selected", false);
+            } else {
+                $(townsel).hide();
+                $(townsel).parent().hide();
+            }
+        })
+    })
+</script>
 
 

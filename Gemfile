@@ -59,6 +59,9 @@ gem 'leaflet-rails'
 gem 'hotwire-rails'
 gem 'photoswipe-rails', '~> 4.1', '>= 4.1.2'
 gem "http"
+gem "turbo-rails", "~> 0.9"
+gem "jbuilder", "~> 2.7"
+gem "stimulus-rails", ">= 0.7"
 
 
 

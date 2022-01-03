@@ -5,7 +5,7 @@ class Region < ApplicationRecord
 
 
   belongs_to :zone
-  belongs_to :country
+  belongs_to :country, :touch => true
   has_many :centers
   has_many :locations
 end

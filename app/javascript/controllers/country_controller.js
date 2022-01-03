@@ -1,11 +1,9 @@
-import { Controller } from "@hotwired/stimulus"
-import { get } from "@rails/request.js"
+import ApplicationController from './application_controller.js'
 
-export default class extends Controller {
-    change(event) {
-     let country = event.target.selectedOptions[0].value
-        get(`/locations/regions?target=country=${country}`, {
-            responseKind: "turbo-stream"
-        })
- }
+export default class extends ApplicationController {
+    static targets = ["target"];
+
+    connect() {
+        console.log('works!')
+    }
 }

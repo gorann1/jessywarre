@@ -8,12 +8,24 @@
           </button>
         </div>
       </div>
-    <div data-controller="country" class="grid gap-4 mt-6 sm:grid-cols-2 md:grid-cols-5">
+    <a href="#"
+       data-controller="counter"
+       data-action="click->counter#increment"
+    >Increment <%= @count %></a>
+
+      <div data-controller="country"
+           data-dependent-select-source-route-part="countries"
+           data-dependent-select-target-route-part="regions"
+           class="grid gap-4 mt-6 sm:grid-cols-2 md:grid-cols-5">
+        <%#= f.collection_select :country_id_eq, Country.order(:name), :id, :name, :prompt => 'Select country'-->
+                                 %>
+        <%#= f.select :region_id_eq, [], {} %>
         <%= f.collection_select :zone_id_eq, Zone.order(:name), :id, :name,
                                 class:"border-gray-100 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
                                 :prompt => 'Zona' %>
         <%= f.collection_select :country_id_eq, Country.order(:name), :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
+                                :data => {target: 'country.source', action: 'country#handleSelectChange'},
                                 :prompt => 'Odaberi Zemlju'%>
         <%= f.grouped_collection_select :region_id_eq, Country.order(:name), :regions, :name, :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
@@ -31,29 +43,5 @@
     <% end %>
     </div>
   </div>
-</div>
-<script type="text/javascript" charset="utf-8">
-    var contsel = "#" + $.escapeSelector('q_country_id_eq');
-    var townsel = "#" + $.escapeSelector('q_region_id_eq');
-    $(townsel).parent().show();
-    $(townsel).hide();
-    $(contsel).change(function() {
-        var townsel = "#" + $.escapeSelector('q_region_id_eq');
-        var contsel = "#" + $.escapeSelector('q_country_id_eq');
-        var country = $.escapeSelector($(contsel + ' :selected').text());
-        var towns = $(townsel).html();
-        var options = $(towns).filter("optgroup[label='" + country + "']").html();
-        if (options) {
-            $(townsel).parent().show();
-            $(townsel).show();
-            $(townsel + " optgroup").hide();
-            $(townsel + " optgroup[label='" + country + "']").show();
-            $(townsel).find('option:selected').prop("selected", false);
-        } else {
-            $(townsel).hide();
-            $(townsel).parent().hide();
-            $(townsel + " optgroup[label='" + country + "']").hide();
 
-        }
-    })
-</script>
+
