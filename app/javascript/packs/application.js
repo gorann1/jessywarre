@@ -15,7 +15,7 @@
 
 
 
-require("@rails/ujs").start();
+require("@rails/ujs");
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
@@ -24,6 +24,7 @@ require("controllers")
 
 import JQuery from 'jquery'
 import 'leaflet'
+import './locations'
 window.$ = window.JQuery = JQuery
 import "@fortawesome/fontawesome-free/css/all"
 import toastr from 'toastr'
@@ -49,7 +50,6 @@ require("@hotwired/turbo-rails")
 import "controllers"
 Rails.start()
 //import "../coffee/countries.js"
-
     $(document).ready(function (){
     $('select#q_country_id_eq').chainedTo('select#q_region_id_eq');
 });

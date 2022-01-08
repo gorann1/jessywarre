@@ -1,5 +1,5 @@
 <div class="container px-6 py-10 mx-auto">
-    <%= search_form_for @q do |f| %>
+  <%= search_form_for(@q, url: locations_path) do |f| %>
       <div class="bg-white flex items-center rounded-full shadow-md border-w-0">
         <%= f.search_field :name_or_desc_cont, class:"rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-white", id:"search", placeholder:"Pretraži" %>
         <div class="p-4">
@@ -25,7 +25,7 @@
                                 :prompt => 'Zona' %>
         <%= f.collection_select :country_id_eq, Country.order(:name), :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
-                                :data => {target: 'country.source', action: 'country#handleSelectChange'},
+                                data: {action: "change->country#handleChange"},
                                 :prompt => 'Odaberi Zemlju'%>
         <%= f.grouped_collection_select :region_id_eq, Country.order(:name), :regions, :name, :id, :name,
                                 class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50",
@@ -43,5 +43,16 @@
     <% end %>
     </div>
   </div>
+<script>
+    $(document).on("change", ".year-selector", function () {
+        $.ajax({
+            url: "/car_brands/search.js",
+            // now pass params[:year] as a query string
+            data: { year: $(".year-selector").val() },
+            type: "GET"
+        });
+    });
+</script>
+
 
 

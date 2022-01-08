@@ -1,0 +1,18 @@
+<div class="w-10/12 bg-gray-900 mt-8 py-4 mx-auto">
+  <%= search_form_for @q do |f| %>
+    <%= f.search_field :name_cont, class:"border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm", focus:"outline-none",
+                       type:"search", placeholder:"Search" %>
+    <div class="grid gap-8 mt-6 sm:grid-cols-2 md:grid-cols-4">
+      <%= f.collection_select :zone_id_eq, Zone.all, :id, :name, class:"border-gray-300  rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50", :prompt => 'Zona' %>
+      <%= f.collection_select :country_id_eq, Country.all, :id, :name, class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50", :prompt => 'Država' %>
+      <%= f.collection_select :region_id_eq, Region.all, :id, :name, class:"border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50", :prompt => 'Regija' %>
+      <button
+        class="px-4 py-2 font-medium tracking-wide text-white capitalize border-2 border-green-300 rounded hover:bg-green-300 hover:text-green-600 focus:outline-none focus:bg-blue-500">
+        Search
+      </button>
+    </div>
+    <div class="my-12">
+      <%= link_to "Reset", request.path, class:"border-2 border-yellow-600 rounded-lg px-3 py-2 text-yellow-400 cursor-pointer hover:bg-yellow-600 hover:text-yellow-200" %>
+    </div>
+  <% end %>
+</div>

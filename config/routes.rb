@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   resources :locations do
     collection do
-      get :regions
+      get :search
 
     end
   end

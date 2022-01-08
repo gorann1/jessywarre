@@ -11,6 +11,7 @@ export { application }
 */
 import { Application } from "stimulus";
 import { definitionsFromContext } from "stimulus/webpack-helpers";
+require("@rails/ujs");
 
 const application = Application.start(document.documentElement)
 const context = require.context('.', true, /_controller\.js$/)

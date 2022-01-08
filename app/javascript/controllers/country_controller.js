@@ -1,9 +1,9 @@
-import ApplicationController from './application_controller.js'
+import { Controller } from "stimulus"
 
-export default class extends ApplicationController {
+export default class extends Controller {
     static targets = ["target"];
 
-    connect() {
+    handleChange() {
         console.log('works!')
     }
 }

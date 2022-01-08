@@ -62,6 +62,9 @@ gem "http"
 gem "turbo-rails", "~> 0.9"
 gem "jbuilder", "~> 2.7"
 gem "stimulus-rails", ">= 0.7"
+gem 'elasticsearch-model', '7.1.1'
+gem 'elasticsearch-rails', '7.1.1'
+
 
 
 

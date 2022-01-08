@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  include Pagy::Frontend
+
   def secret_admin_name
     ENV['ADMIN_NAME'] || 'konnor'
   end
@@ -21,5 +23,7 @@ module ApplicationHelper
       "#{base_title} | #{page_title}"
     end
   end
+
+
 
 end

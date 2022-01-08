@@ -87,7 +87,9 @@
             <% end %>
       <% end %>
     </div>
+    <%== pagy_nav(@pagy) %>
   </div>
+  <%== pagy_info(@pagy) %>
 </main>
 <%=render 'partials/photoswipe' %>
 
@@ -102,28 +104,57 @@
         accessToken: 'pk.eyJ1IjoiZ29yYW5uMSIsImEiOiJja3RxMTFpb3Mwcnp1Mm5xdWRwN2MzZzBnIn0.MnIdSx0hv-JEPsshltD2Kg'
     }).addTo(mymap);
 </script>-->
-<script type="text/javascript" charset="utf-8">
-    $(document).ready(function(){
-        var contsel = "#" + $.escapeSelector('q_country_id_eq');
-        var townsel = "#" + $.escapeSelector('q_region_id_eq');
-        $(contsel).change(function () {
-            var townsel = "#" + $.escapeSelector('q_region_id_eq');
-            var contsel = "#" + $.escapeSelector('q_country_id_eq');
-            var country = $.escapeSelector($(contsel + ' :selected').text());
-            var towns = $(townsel).html();
-            var options = $(towns).filter("optgroup[label='" + country + "']").html();
-            if (options) {
-                $(townsel).parent().show();
-                $(townsel).show();
-                $(townsel + " optgroup").hide();
-                $(townsel + " optgroup[label='" + country + "']").show();
-                $(townsel).find('option:selected').prop("selected", false);
-            } else {
-                $(townsel).hide();
-                $(townsel).parent().hide();
-            }
+
+<!--<script type="text/javascript" charset="utf-8">
+    var country_select, region_select, selected_country;
+    window.addEventListener("load", () => {
+        country_select = document.querySelector("select#q_country_id_eq");
+        region_select = document.querySelector("select#q_region_id_eq");
+        country_select.addEventListener('change', (event) => {
+            selected_country = country_select.selectedIndex;
+            Rails.ajax({
+                url: "/locations/" + selected_country,
+                type: "get",
+                data: "",
+                success: function (data) {
+                    region_select.innerHTML = data;
+                },
+                error: function (data) { }
+            })
         })
-    })
+    });
+
+</script>-->
+<!--<script type="text/javascript" charset="utf-8">
+    var country_select, city_select, selected_country;
+    window.addEventListener("load", () => {
+        country_select = document.querySelector("select#q_country_id_eq");
+        city_select = document.querySelector("select#q_region_id_eq");
+        country_select.addEventListener('change', (event) => {
+            selected_country = country_select.selectedIndex;
+            Rails.ajax({
+                url: "/locations/" + selected_country,
+                type: "get",
+                data: "",
+                success: function (data) {
+                    city_select.innerHTML = data;
+                },
+                error: function (data) { }
+            })
+        })
+    });
 </script>
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+        $("#q_country_id_eq").change(function () {
+            $("#q_region_id_eq").children("optgroup").children().prop("disabled", "disabled").prop("selected", false);
+            var arr = $(this).val();
+            for (var i = 0; i < arr.length; i++) {
+                $("#q_region_id_eq").children("optgroup[label='" + arr[i] + "']").children().prop("disabled",false).prop("selected", "selected");
+            }
+            $("#q_country_id_eq").focus();
+        });
+    });
+</script>-->
 
 

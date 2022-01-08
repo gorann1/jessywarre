@@ -7,6 +7,8 @@ class LocationsController < ApplicationController
     @q.sorts = ['name asc', 'created_at desc'] if @q.sorts.empty?
     @locations = @q.result.includes(:countries, :regions)
 
+    @countries = Country.where(region: params[:region])
+
     #@regions = @regions.where(country_id: params[:country_id]) if params[:country_id].present?
     if params[:country_id].present?
       @regions = Country.find(params[:country_id]).regions
