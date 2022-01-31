@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all',
+                          'data-turbolinks-track': 'reload' %>
+
+
+  <%= stylesheet_pack_tag 'application', media: 'all',
+                          'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script
+    src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.3.5/dist/alpine.min.js"
+    defer
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+
+</head>
+<body class="antialiased text-gray-900 font-sans mt-8 pt-6">
+<div class="w-full bg-white">
+  <%= render 'shared/header' %>
+  <%= render "shared/message" %>
+
+  <!--  <div class="flex flex-col items-centers justify-centers h-screen select-none">-->
+  <%= yield %>
+  <!--  </div>-->
+</div>
+
+</body>
+</html>

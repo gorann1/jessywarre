@@ -6,8 +6,9 @@ class ArticlesController < ApplicationController
                                password: helpers.secret_admin_password,
                                except: %i[index show]
 
+  layout 'article'
   def index
-    @articles = Article.all
+    @articles = set_page_and_extract_portion_from Article.all, per_page: [10]
   end
 
   def new

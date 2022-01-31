@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 Rails.application.routes.draw do
+  resources :rooms
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
 

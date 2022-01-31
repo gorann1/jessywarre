@@ -6,4 +6,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(email: "admin@example.com", name: "Admin Example", password: "password", password_confirmation: "password", superadmin: true) if Rails.env.development?
+
+puts "Remove existing articles"
+Article.destroy_all
+
+puts "Create new articles"
+100.times do |number|
+  Article.create!(
+    title: "Title #{number}",
+    text: "This is the body of the article number #{number}"
+  )
+end

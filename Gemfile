@@ -130,3 +130,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "active_material", "~> 1.5"
 
 gem "stimulus_reflex", "~> 3.4"
+
+gem "geared_pagination", "~> 1.1"

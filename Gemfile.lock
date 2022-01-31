@@ -213,6 +213,9 @@ GEM
     fugit (1.5.1)
       et-orbi (~> 1.1, >= 1.1.8)
       raabro (~> 1.4)
+    geared_pagination (1.1.0)
+      activesupport (>= 5.0)
+      addressable (>= 2.5.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     gmaps4rails (2.1.2)
@@ -591,6 +594,7 @@ DEPENDENCIES
   email_spec
   factory_bot_rails
   friendly_id
+  geared_pagination (~> 1.1)
   gmaps4rails
   guard-rspec
   hotwire-rails

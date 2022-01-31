@@ -9,7 +9,9 @@ class CentersController < ApplicationController
     #@centers = @q.result
     #@pagy, @centers = pagy(@q.result, items: 18)
     #@pagy, @centers = pagy(@q.result)
-    @pagy, @centers = pagy Center.all
+    #@pagy, @centers = pagy Center.all
+    @centers = set_page_and_extract_portion_from Center.all, per_page: [10]
+=begin
 
     respond_to do |format|
       format.html
@@ -17,6 +19,7 @@ class CentersController < ApplicationController
         render json: { entries: render_to_string(partials: "centers", formats: [:html]), pagination: view_context.pagy_nav(@pagy) }
       }
     end
+=end
 
   end
 
